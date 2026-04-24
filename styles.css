@@ -1,17 +1,19 @@
 :root {
-  --bg: #f3efe7;
-  --bg-soft: rgba(255, 255, 255, 0.62);
-  --surface: rgba(255, 255, 255, 0.78);
-  --surface-strong: #fffdf8;
-  --ink: #10243a;
-  --ink-soft: #46607a;
-  --accent: #0e5f8f;
-  --accent-strong: #0a4367;
-  --line: rgba(16, 36, 58, 0.1);
-  --shadow: 0 22px 60px rgba(16, 36, 58, 0.12);
-  --radius-xl: 28px;
-  --radius-lg: 20px;
-  --radius-md: 14px;
+  --bg: #e8e2d7;
+  --bg-deep: #d8cfbf;
+  --surface: rgba(255, 252, 246, 0.8);
+  --surface-strong: #fffdfa;
+  --surface-soft: rgba(255, 255, 255, 0.56);
+  --ink: #14263c;
+  --ink-soft: #51657c;
+  --accent: #b86a2f;
+  --accent-dark: #8e4f1f;
+  --highlight: #184a73;
+  --line: rgba(20, 38, 60, 0.1);
+  --shadow: 0 24px 70px rgba(20, 38, 60, 0.12);
+  --radius-xl: 32px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
 }
 
 * {
@@ -25,11 +27,11 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  font-family: "Segoe UI Variable", Aptos, "Trebuchet MS", sans-serif;
+  font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
   background:
-    radial-gradient(circle at top left, rgba(14, 95, 143, 0.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(199, 149, 52, 0.17), transparent 24%),
-    linear-gradient(180deg, #f7f4ee 0%, var(--bg) 100%);
+    radial-gradient(circle at top left, rgba(184, 106, 47, 0.2), transparent 26%),
+    radial-gradient(circle at right 20%, rgba(24, 74, 115, 0.16), transparent 28%),
+    linear-gradient(180deg, #f4eee5 0%, var(--bg) 50%, var(--bg-deep) 100%);
 }
 
 a {
@@ -41,15 +43,33 @@ a {
   margin: 24px auto 40px;
 }
 
+.hero,
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
 .hero {
   padding: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: calc(var(--radius-xl) + 8px);
   background:
-    linear-gradient(135deg, rgba(255, 253, 248, 0.86), rgba(244, 238, 227, 0.72)),
-    rgba(255, 255, 255, 0.5);
+    linear-gradient(135deg, rgba(255, 250, 244, 0.94), rgba(248, 241, 231, 0.76)),
+    var(--surface);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
+}
+
+.hero::after,
+.section::after {
+  content: "";
+  position: absolute;
+  inset: auto -8% -70px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184, 106, 47, 0.12), transparent 68%);
+  pointer-events: none;
 }
 
 .topbar {
@@ -60,10 +80,9 @@ a {
 }
 
 .topbar__brand {
-  font-family: Georgia, "Palatino Linotype", serif;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -78,18 +97,24 @@ a {
   text-decoration: none;
 }
 
+.topbar__links a:hover,
+.contact-list a:hover {
+  color: var(--accent-dark);
+}
+
 .hero__content {
   display: grid;
-  grid-template-columns: 1.8fr 1fr;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.95fr);
   gap: 28px;
-  margin-top: 42px;
+  margin-top: 44px;
 }
 
 .eyebrow {
   margin: 0 0 10px;
-  color: var(--accent);
-  font-size: 0.84rem;
-  font-weight: 700;
+  color: var(--accent-dark);
+  font-family: "Segoe UI Variable", Aptos, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -98,13 +123,12 @@ a {
 .section-heading h2,
 .timeline-item h3,
 .skill-card h3 {
-  font-family: Georgia, "Palatino Linotype", serif;
+  margin: 0;
 }
 
 .hero h1 {
-  margin: 0;
-  max-width: 14ch;
-  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  max-width: 12ch;
+  font-size: clamp(3rem, 5.5vw, 5rem);
   line-height: 0.95;
 }
 
@@ -113,13 +137,13 @@ a {
   margin: 22px 0 0;
   color: var(--ink-soft);
   font-size: 1.05rem;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 .contact-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 18px;
+  gap: 12px 16px;
   margin-top: 24px;
 }
 
@@ -128,8 +152,9 @@ a {
   padding: 10px 14px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.64);
+  background: rgba(255, 255, 255, 0.68);
   color: var(--ink-soft);
+  font-family: "Segoe UI Variable", Aptos, sans-serif;
   font-size: 0.95rem;
   text-decoration: none;
 }
@@ -148,58 +173,90 @@ a {
   min-height: 48px;
   padding: 0 18px;
   border-radius: 999px;
-  text-decoration: none;
+  font-family: "Segoe UI Variable", Aptos, sans-serif;
   font-weight: 700;
+  text-decoration: none;
   transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
 }
 
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 .button--primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
-  box-shadow: 0 14px 30px rgba(14, 95, 143, 0.24);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  box-shadow: 0 14px 36px rgba(184, 106, 47, 0.28);
 }
 
 .button--ghost {
-  border: 1px solid rgba(14, 95, 143, 0.18);
-  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(20, 38, 60, 0.1);
+  background: rgba(255, 255, 255, 0.74);
 }
 
 .hero__panel {
   align-self: start;
   padding: 22px;
-  border: 1px solid rgba(14, 95, 143, 0.12);
+  border: 1px solid rgba(20, 38, 60, 0.08);
   border-radius: var(--radius-xl);
   background:
-    linear-gradient(180deg, rgba(14, 95, 143, 0.12), rgba(14, 95, 143, 0.03)),
+    linear-gradient(180deg, rgba(24, 74, 115, 0.08), rgba(24, 74, 115, 0.03)),
     var(--surface-strong);
 }
 
 .panel__label {
   margin: 0 0 16px;
-  color: var(--accent);
-  font-size: 0.86rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  color: var(--highlight);
+  font-family: "Segoe UI Variable", Aptos, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.metric {
+  padding: 14px;
+  border: 1px solid rgba(20, 38, 60, 0.08);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.metric__value {
+  display: block;
+  color: var(--highlight);
+  font-family: "Segoe UI Variable", Aptos, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.metric__label {
+  display: block;
+  margin-top: 4px;
+  color: var(--ink-soft);
+  font-family: "Segoe UI Variable", Aptos, sans-serif;
+  font-size: 0.88rem;
 }
 
 .fact-list {
   margin: 0;
   padding-left: 18px;
   color: var(--ink-soft);
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 .section {
   margin-top: 24px;
   padding: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.76);
   border-radius: calc(var(--radius-xl) + 2px);
-  background: var(--bg-soft);
+  background: var(--surface-soft);
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
 }
@@ -213,13 +270,12 @@ a {
 }
 
 .section-heading h2 {
-  margin: 0;
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
 }
 
 .card {
   padding: 22px;
-  border: 1px solid rgba(16, 36, 58, 0.08);
+  border: 1px solid rgba(20, 38, 60, 0.08);
   border-radius: var(--radius-lg);
   background: var(--surface);
 }
@@ -243,15 +299,15 @@ a {
 }
 
 .timeline-item__meta {
-  color: var(--accent);
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  color: var(--highlight);
+  font-family: "Segoe UI Variable", Aptos, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.03em;
 }
 
 .timeline-item h3,
 .skill-card h3 {
-  margin: 0;
-  font-size: 1.26rem;
+  font-size: 1.24rem;
 }
 
 .muted {
@@ -264,7 +320,7 @@ a {
   margin: 14px 0 0;
   padding-left: 18px;
   color: var(--ink-soft);
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 .skills-grid {
@@ -276,12 +332,13 @@ a {
 .skill-card p {
   margin: 12px 0 0;
   color: var(--ink-soft);
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 .footer {
-  padding: 28px 16px 10px;
+  padding: 30px 16px 10px;
   color: var(--ink-soft);
+  font-family: "Segoe UI Variable", Aptos, sans-serif;
   text-align: center;
 }
 
@@ -301,6 +358,10 @@ a {
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .hero h1 {
+    max-width: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -314,8 +375,10 @@ a {
     padding: 20px;
   }
 
-  .hero h1 {
-    max-width: none;
+  .metrics-grid,
+  .contact-list,
+  .hero__actions {
+    grid-template-columns: 1fr;
   }
 
   .contact-list a,

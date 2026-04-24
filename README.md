@@ -1,73 +1,71 @@
 # German Ryndia
 
-Professionell aufbereiteter Lebenslauf als GitHub-Repository mit browserfreundlicher Web-Version und PDF-Download.
+English CV website with a clean one-page layout, downloadable PDF, and GitHub Pages support.
 
-## Inhalte
+## Links
 
-- [Web-CV ansehen](./index.html)
-- [Live-Version via GitHub Pages](https://snaker373.github.io/CV/)
-- [PDF-Lebenslauf herunterladen](./assets/German-Ryndia-CV.pdf)
-- [LinkedIn-Profil](https://linkedin.com/in/german-ryndia)
-- Kontakt: `ryndiagerman@gmail.com`
+- [Live website](https://snaker373.github.io/CV/)
+- [PDF version](./assets/German-Ryndia-CV.pdf)
+- [LinkedIn](https://linkedin.com/in/german-ryndia)
+- Email: `ryndiagerman@gmail.com`
 
-## Kurzprofil
+## About
 
-Motivierter Bewerber im IT-Bereich mit praktischer Erfahrung in Web-Design, Frontend-Entwicklung und der Umsetzung kompletter Projekte mit HTML, CSS und JavaScript. Ziel ist es, technisches Wissen in einem professionellen Umfeld weiterzuentwickeln und mit kreativen, sauberen Loesungen echten Mehrwert zu schaffen.
+Frontend-focused candidate with hands-on experience in web design, interface implementation, and building websites with HTML, CSS, and JavaScript. Interested in junior frontend, web development, and software development opportunities where practical skills can grow through real work.
 
-## Schwerpunkte
+## Highlights
 
-- Frontend-Entwicklung mit HTML, CSS und JavaScript
-- UI/UX-Arbeit mit Figma
-- Git und GitHub fuer Versionsverwaltung
-- Solide Grundlagen in Python, Java und SQL
-- Teamfaehigkeit, Eigeninitiative und detailorientierte Arbeitsweise
+- Built portfolio-style websites from design to implementation
+- Worked with Figma, Git, GitHub, and core frontend technologies
+- Studied computer engineering and completed German language training to B2 level
+- Brings a reliable, detail-oriented, and fast-learning approach
 
-## Berufserfahrung & Projekte
+## Experience
 
 ### KeepSolid, Remote
 
 **Web Designer & Frontend Developer**  
-`12/2024 - 02/2025`
+`Dec 2024 - Feb 2025`
 
-- Eigene Portfolio-Website konzipiert und vollstaendig realisiert
-- UI/UX-Design mit Figma erlernt und angewendet
-- Website mit HTML, CSS und JavaScript umgesetzt
+- Planned and built a personal portfolio website
+- Applied UI/UX design principles in Figma
+- Implemented the site with HTML, CSS, and JavaScript
 
 **Frontend Developer**  
-`12/2025 - 02/2026`
+`Dec 2025 - Feb 2026`
 
-- Portfolio-Website fuer ein Moebelmontage-Unternehmen entwickelt
-- Design in Figma erstellt und komplett in HTML/CSS umgesetzt
-- Kenntnisse in modernen Frontend-Methoden weiter vertieft
+- Created a website for a furniture assembly business
+- Designed layouts in Figma and translated them into code
+- Improved practical frontend and layout skills
 
-### Weitere praktische Erfahrung
+### Additional work experience
 
-- **Sozialpraktikum**, Altenheim Wichern Haus, Saarbruecken
-- **Waeschereimitarbeiter (Minijob)**, Waescherei Winterberg, Saarbruecken
-- **Kuechenhilfe (Minijob)**, Cafe Extrablatt, Saarbruecken
-- **Produktionsmitarbeiter (Minijob)**, Ludwigs Schokoladenfabrik, Saarlouis
+- **Social Internship**, Wichern House retirement home, Saarbruecken
+- **Laundry Worker (Part-time)**, Waescherei Winterberg, Saarbruecken
+- **Kitchen Assistant (Part-time)**, Cafe Extrablatt, Saarbruecken
+- **Production Worker (Part-time)**, Ludwigs Schokoladenfabrik, Saarlouis
 
-## Ausbildung
+## Education
 
-- **Computertechnik (Online-Studium)**, International Humanitarian University, Odessa
-- **Deutschkurs B2**, FIS Fremdspracheninstitut, Saarbruecken
+- **Computer Engineering (Online Studies)**, International Humanitarian University, Odesa
+- **German Language Course, B2**, FIS Language Institute, Saarbruecken
 - **Willi-Graf-Gymnasium**, Saarbruecken
-- **Allgemeinbildende Schule**, Odessa, Ukraine
+- **General Secondary School**, Odesa, Ukraine
 
-## Kenntnisse
+## Skills
 
-- **Programmierung:** HTML, CSS, JavaScript, Python, Java (Grundkenntnisse), SQL (Grundkenntnisse)
-- **Tools:** Figma, Git, GitHub, MS Office, Linux (Grundlagen)
-- **Sprachen:** Ukrainisch, Russisch, Deutsch B2
-- **Fuehrerschein:** Klasse B
+- **Programming:** HTML, CSS, JavaScript, Python, Java (basic), SQL (basic)
+- **Tools:** Figma, Git, GitHub, Microsoft Office, Linux basics
+- **Languages:** Ukrainian, Russian, German (B2)
+- **Strengths:** Fast learner, team player, reliable, proactive, detail-oriented
 
 ## GitHub Pages
 
-Wenn du das Repository als Webseite veroeffentlichen willst:
+To publish the site:
 
-1. Repository nach GitHub pushen.
-2. In GitHub `Settings -> Pages` oeffnen.
-3. Als Source `Deploy from a branch` waehlen.
-4. Branch `main` und Ordner `/ (root)` auswaehlen.
+1. Open the repository on GitHub.
+2. Go to `Settings -> Pages`.
+3. Choose `Deploy from a branch`.
+4. Select `main` and `/ (root)`.
 
-Danach ist das CV typischerweise unter `https://snaker373.github.io/CV/` erreichbar.
+The site should then be available at `https://snaker373.github.io/CV/`.
