@@ -1,6 +1,6 @@
 # German Ryndia
 
-English CV website with a clean one-page layout, downloadable PDF, and GitHub Pages support.
+My English CV website with a clean one-page layout, downloadable PDF, and GitHub Pages support.
 
 ## Links
 
